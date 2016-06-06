@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "g9rga\\newrelic\\": "yii2-newrelic"
+            "g9rga\\newrelic\\": ""
         }
     }
 }
