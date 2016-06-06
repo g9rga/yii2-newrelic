@@ -90,7 +90,7 @@ class Newrelic extends Component implements BootstrapInterface
     private function get($apiClass)
     {
         if (!isset($this->apiComponents[$apiClass])) {
-            $fullDefinition = __NAMESPACE__ . '\\api\\' . $apiClass;
+            $fullDefinition = __NAMESPACE__ . '\\api\\' . ucfirst($apiClass);
             $this->apiComponents[$apiClass] = new $fullDefinition;
         }
         return $this->apiComponents[$apiClass];
