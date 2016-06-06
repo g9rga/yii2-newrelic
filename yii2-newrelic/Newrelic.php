@@ -48,7 +48,7 @@ class Newrelic extends Component implements BootstrapInterface
     }
 
     /**
-     * @return Application
+     * @return api\Application
      */
     public function getApplication()
     {
@@ -57,7 +57,7 @@ class Newrelic extends Component implements BootstrapInterface
 
     /**
      * @throws InvalidConfigException
-     * @return Browser
+     * @return api\Browser
      */
     public function getBrowser()
     {
@@ -69,7 +69,7 @@ class Newrelic extends Component implements BootstrapInterface
 
     /**
      * @throws InvalidConfigException
-     * @return User
+     * @return api\User
      */
     public function getUser()
     {
@@ -80,7 +80,7 @@ class Newrelic extends Component implements BootstrapInterface
     }
 
     /**
-     * @return Transaction
+     * @return api\Transaction
      */
     public function getTransaction()
     {
