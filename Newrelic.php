@@ -18,6 +18,8 @@ use yii\base\Component;
  */
 class Newrelic extends Component implements BootstrapInterface
 {
+    const NULL_API_CLASS = 'NullApi';
+
     public $licenseKey;
     public $enabled;
     public $applicationName;
@@ -27,8 +29,6 @@ class Newrelic extends Component implements BootstrapInterface
 
     public function bootstrap($app)
     {
-        if (!$this->enabled)
-            return null;
         if (!$this->licenseKey)
             throw new InvalidConfigException('License key should be set');
 
@@ -90,6 +90,8 @@ class Newrelic extends Component implements BootstrapInterface
     private function get($apiClass)
     {
         if (!isset($this->apiComponents[$apiClass])) {
+            if (!$this->enabled)
+                $apiClass = self::NULL_API_CLASS;
             $fullDefinition = __NAMESPACE__ . '\\api\\' . ucfirst($apiClass);
             $this->apiComponents[$apiClass] = new $fullDefinition;
         }
