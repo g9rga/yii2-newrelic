@@ -4,7 +4,7 @@
     "type": "yii2-component",
     "keywords": ["yii2 newrelic", "newrelic", "yii2-newrelic"],
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "authors": [
         {
             "name": "g9rga",
