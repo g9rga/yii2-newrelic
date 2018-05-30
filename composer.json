@@ -4,14 +4,14 @@
     "type": "yii2-component",
     "keywords": ["yii2 newrelic", "newrelic", "yii2-newrelic"],
     "license": "MIT",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "g9rga",
             "email": "selether@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=5.3.0",
         "yiisoft/yii2": "*",
